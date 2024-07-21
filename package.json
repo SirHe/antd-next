@@ -5,7 +5,11 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "license"
+  ],
   "devDependencies": {
     "@babel/preset-env": "^7.24.8",
     "@rollup/plugin-babel": "^6.0.4",
