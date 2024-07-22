@@ -3,7 +3,7 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type { Config } from 'jest';
+import type { Config } from "jest"
 
 const config: Config = {
   // All imported modules in your tests should be mocked automatically
@@ -103,7 +103,7 @@ const config: Config = {
 
   // A preset that is used as a base for Jest's configuration
   // preset: undefined,
-  preset: 'ts-jest',
+  preset: "ts-jest",
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -147,7 +147,7 @@ const config: Config = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: "jsdom"
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -195,6 +195,6 @@ const config: Config = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
+}
 
-export default config;
+export default config
