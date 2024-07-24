@@ -1,6 +1,8 @@
 import path from "path"
 import react from "@vitejs/plugin-react"
 import { defineConfig, loadEnv } from "vite"
+import tailwindcss from "tailwindcss"
+import autoprefixer from "autoprefixer"
 import { wrapperEnv } from "./src/utils/getEnv"
 
 const env = loadEnv("", process.cwd(), "VITE_")
@@ -24,6 +26,11 @@ export default defineConfig({
       //   assetFileNames: '[name].[hash].[ext]', // 资源文件的文件名格式
       //   dir: path.resolve(__dirname, 'dist'), // 输出目录
       // },
+    }
+  },
+  css: {
+    postcss: {
+      plugins: [tailwindcss, autoprefixer]
     }
   },
   server: {

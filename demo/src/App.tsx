@@ -1,7 +1,7 @@
 import React from "react"
 
 const App = () => {
-  return <React.Fragment>hello world </React.Fragment>
+  return <div className="text-red-700">hello world </div>
 }
 
 export default App
