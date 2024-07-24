@@ -1,6 +1,6 @@
 {
   "name": "antd-next",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "keywords": [],
@@ -12,7 +12,8 @@
   ],
   "scripts": {
     "prettier": "npx prettier --write .",
-    "lint": "npx eslint --fix . "
+    "lint": "npx eslint --fix . ",
+    "publish": "pnpm -r publish --access public --no-git-checks"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.24.8",
