@@ -6,15 +6,12 @@
 
 基础格式如下：
 
-```html
-<type
-  >(<scope
-    >):
-    <subject>
-      <BLANK LINE>
-        <body>
-          <BLANK LINE> <footer></footer></BLANK></body></BLANK></subject></scope
-></type>
+```txt
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
 ```
 
 ## commit 规范检查环境
