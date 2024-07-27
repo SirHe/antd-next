@@ -24,8 +24,7 @@ husky环境搭建：
 1、安装husky：`pnpm add husky -D -w`
 2、初始化 Husky 并创建 Git hooks：`npx husky install`
 3、然后添加一个 commit-msg 钩子来检查提交信息：
-`echo '#!/bin/sh' > .husky/commit-msg`
-`echo 'npx --no-install commitlint --edit "$1"' > .husky/commit-msg`
+`echo '#!/bin/sh\nnpx --no-install commitlint --edit "$1"' > .husky/commit-msg`
 4、创建 commitlint.config.js 文件
 
 ```js
@@ -34,6 +33,16 @@ module.exports = {
   extends: ["@commitlint/config-conventional"]
 }
 ```
+
+5、在 `package.json` 添加 prepare scripts 脚本。
+
+```json
+"scripts": {
+  "prepare": "npx husky install"
+}
+```
+
+`package.json` 中有两种脚本，一种是自定义脚本，这种我们经常用；另一种是生命周期脚本，比如 prepare、preinstall、prepublish等，这些脚本在特定的生命周期阶段会**自动运行**。
 
 ### 关于 husky
 
