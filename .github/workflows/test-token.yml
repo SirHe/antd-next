@@ -1,0 +1,17 @@
+name: Validate GitHub Token
+
+on: [push]
+
+jobs:
+  validate-token:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Test GitHub Token
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+        run: |
+          curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/user
