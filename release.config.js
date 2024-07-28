@@ -1,5 +1,5 @@
 module.exports = {
-  branches: ["main"],
+  branches: ["develop"],
   repositoryUrl: "https://github.com/SirHe/antd-next.git",
   plugins: [
     "@semantic-release/commit-analyzer",
