@@ -5,10 +5,13 @@
   "module": "dist/index.mjs",
   "type": "module",
   "exports": {
-    "import": "dist/index.mjs",
-    "require": "dist/index.cjs"
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
   },
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jest",
     "build": "rollup -c"

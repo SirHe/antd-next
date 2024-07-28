@@ -1,3 +1,39 @@
 {
-  "nuxt.isNuxtApp": false
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.format.enable": false, // 关闭 ESLint 格式化
+  "json.format.enable": false, // 关闭 JSON 格式化
+  "html.format.enable": false, // 关闭 HTML 格式化
+  "css.format.enable": false, // 关闭 CSS 格式化
+  "less.format.enable": false, // 关闭 LESS 格式化
+  "scss.format.enable": false, // 关闭 SCSS 格式化
+  "typescript.format.enable": false, // 关闭 TypeScript 格式化
+  "javascript.format.enable": false, // 关闭 JavaScript 格式化
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
