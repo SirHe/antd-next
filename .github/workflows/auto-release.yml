@@ -12,15 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout
         with:
           ref: master
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-          registry-url: 'https://registry.npmjs.org/'
+        uses: actions/setup-node
 
       - name: Install dependencies
         run: npm install
