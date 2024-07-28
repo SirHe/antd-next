@@ -1,6 +1,6 @@
 module.exports = {
   branches: ["develop"],
-  repositoryUrl: "https://github.com/SirHe/antd-next.git",
+  repositoryUrl: "https://github.com/SirHe/antd-next",
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
