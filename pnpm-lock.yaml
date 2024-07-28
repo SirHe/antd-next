@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@antd-next/shared':
+        specifier: workspace:^
+        version: link:shared
     devDependencies:
       '@babel/preset-env':
         specifier: ^7.24.8
@@ -99,11 +103,7 @@ importers:
         specifier: ^5.3.4
         version: 5.3.4(@types/node@20.14.12)(terser@5.31.3)
 
-  demo:
-    dependencies:
-      '@antd-next/shared':
-        specifier: workspace:^
-        version: link:../shared
+  demo: {}
 
   packages/components: {}
 
