@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Cell Merge Demo</title>
+    <!-- 这里的 type="module" 一定要记得写，这一块 vite 做的还是不太好；
+      1、没有像 webpack 那样帮用户自己引入 js（一般上工程化环境后，用户就不再关注 html 里面的资源引入了，这也是 webpack 使用后产生的习惯）
+      2、报错也不友好，没有做预设警告，导致原生错误直接抛给了用户
+    -->
+    <!-- <script type="module" src="./demo/index.ts"></script> -->
+    <style>
+      .nav {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <button onclick="onShow('antd')">antd</button>
+      <button onclick="onShow('elementUI')">elementUI</button>
+      <button onclick="onShow('xlsx')">xlsx</button>
+    </nav>
+    <div id="app"></div>
+    <script type="module">
+      import * as demo from "./demo/index"
+      // 这里又有一个坑点：必须使用 window.onShow，而不能使用 const onShow；因为 module 作用域在 html 中访问不到
+      window.onShow = (type) => {
+        demo[type]()
+      }
+    </script>
+  </body>
+</html>

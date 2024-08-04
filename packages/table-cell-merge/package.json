@@ -1,0 +1,22 @@
+{
+  "name": "table-cell-merge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "files": [
+    "dist",
+    "license"
+  ],
+  "scripts": {
+    "start": "npx vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "xlsx": "^0.18.5"
+  }
+}
