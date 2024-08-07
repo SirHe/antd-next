@@ -1,5 +1,6 @@
 import { resolve } from "path"
 import react from "@vitejs/plugin-react"
+import vue from "@vitejs/plugin-vue"
 import { defineConfig, loadEnv } from "vite"
 
 type Recordable<T = any> = Record<string, T>
@@ -26,7 +27,7 @@ const { VITE_PORT, VITE_OPEN } = wrapperEnv(env)
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react() as any],
+  plugins: [react() as any, vue()],
   resolve: {
     alias: {
       "@": resolve(__dirname, "src")
