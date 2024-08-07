@@ -38,7 +38,7 @@ export default defineConfig({
     lib: {
       entry: {
         antd: resolve(__dirname, "./render/antd.ts"),
-        elementUI: resolve(__dirname, "./render/element-ui.ts"),
+        elementPlus: resolve(__dirname, "./render/element-plus.ts"),
         xlsx: resolve(__dirname, "./render/xlsx.ts"),
         index: resolve(__dirname, "./render/index.ts")
       },
@@ -47,7 +47,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         antd: resolve(__dirname, "./render/antd.ts"),
-        elementUI: resolve(__dirname, "./render/element-ui.ts"),
+        elementPlus: resolve(__dirname, "./render/element-plus.ts"),
         xlsx: resolve(__dirname, "./render/xlsx.ts"),
         index: resolve(__dirname, "./render/index.ts")
       },

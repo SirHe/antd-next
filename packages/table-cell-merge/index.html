@@ -15,12 +15,24 @@
         justify-content: space-around;
         margin-bottom: 20px;
       }
+
+      .nav button {
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .nav button:hover {
+        background-color: #ccc;
+      }
     </style>
   </head>
   <body>
     <nav class="nav">
       <button onclick="onShow('antd')">antd</button>
-      <button onclick="onShow('elementUI')">elementUI</button>
+      <button onclick="onShow('elementPlus')">elementPlus</button>
       <button onclick="onShow('xlsx')">xlsx</button>
     </nav>
     <div id="app"></div>

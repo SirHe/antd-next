@@ -96,7 +96,10 @@ export default class Matrix {
     }
   }
 
-  forEach(fn: (item: any, index: Array<number>, data: any) => void, mode = FOREACH_MODE.ROW) {
+  forEach(
+    fn: (item: any, index: Array<number>, realIndex: Array<number | string>, data: any) => void,
+    mode = FOREACH_MODE.ROW
+  ) {
     const { x, y, data } = this
     const xLen = x.length
     const yLen = y.length
@@ -113,7 +116,8 @@ export default class Matrix {
           item = this.getItem(_j, _i)
         }
         const index = mode === FOREACH_MODE.ROW ? [_i, _j] : [_j, _i]
-        fn(item, index, data)
+        const realIndex = mode === FOREACH_MODE.ROW ? [x[_i], y[_j]] : [y[_j], x[_i]]
+        fn(item, index, realIndex, data)
       }
     }
   }
