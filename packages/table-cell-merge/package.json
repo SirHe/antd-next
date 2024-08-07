@@ -8,6 +8,10 @@
     "dist",
     "license"
   ],
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
   "scripts": {
     "start": "npx vite",
     "build": "npx vite build",
