@@ -1,8 +1,7 @@
-import ReactDOM from "react-dom/client"
 import React from "react"
 import { Table } from "antd"
-import { getData } from "../mock/index"
-import wrapperTable from "../render/antd"
+import { getData } from "../../mock"
+import wrapperTable from "../../render/antd"
 
 const data = getData(10)
 
@@ -47,6 +46,4 @@ const App = () => {
   return <Table bordered columns={columns} dataSource={dataSource} />
 }
 
-export default () => {
-  ;(ReactDOM as any).createRoot(document.querySelector("#app")!).render(<App />)
-}
+export default App
