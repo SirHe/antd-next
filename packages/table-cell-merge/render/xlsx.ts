@@ -26,6 +26,9 @@ export default function (data: Array<object>, columns: Array<any>) {
       // 需要合并的行
       merges.push({ s: { r: i - (v.rowSpan - 1), c: j }, e: { r: i, c: j } })
     }
+    if (v.rowSpan === 0) {
+      body[i][j] = ""
+    }
   })
 
   // 由于表头的缘故，需要整体下移一格
