@@ -45,7 +45,6 @@ export default () => {
   const { data, merges } = getXlsxData(data1, columns)
   const worksheet = XLSX.utils.aoa_to_sheet(data)
   // 合并单元格
-  debugger
   worksheet["!merges"] = merges
   // 创建一个新的工作簿
   const workbook = XLSX.utils.book_new()
