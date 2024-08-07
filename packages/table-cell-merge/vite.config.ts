@@ -1,8 +1,6 @@
 import { resolve } from "path"
 import react from "@vitejs/plugin-react"
 import { defineConfig, loadEnv } from "vite"
-import tailwindcss from "tailwindcss"
-import autoprefixer from "autoprefixer"
 
 type Recordable<T = any> = Record<string, T>
 
@@ -36,11 +34,21 @@ export default defineConfig({
     extensions: [".js", ".jsx", ".ts", ".tsx"] // 支持的文件扩展名
   },
   build: {
+    lib: {
+      entry: {
+        antd: resolve(__dirname, "./render/antd.ts"),
+        elementUI: resolve(__dirname, "./render/element-ui.ts"),
+        xlsx: resolve(__dirname, "./render/xlsx.ts"),
+        index: resolve(__dirname, "./render/index.ts")
+      },
+      formats: ["es", "cjs"]
+    },
     rollupOptions: {
       input: {
         antd: resolve(__dirname, "./render/antd.ts"),
         elementUI: resolve(__dirname, "./render/element-ui.ts"),
-        xlsx: resolve(__dirname, "./render/xlsx.ts")
+        xlsx: resolve(__dirname, "./render/xlsx.ts"),
+        index: resolve(__dirname, "./render/index.ts")
       },
       output: {
         //   entryFileNames: '[name].[hash].js', // 出口文件名格式
@@ -48,11 +56,6 @@ export default defineConfig({
         //   assetFileNames: '[name].[hash].[ext]', // 资源文件的文件名格式
         dir: resolve(__dirname, "dist") // 输出目录
       }
-    }
-  },
-  css: {
-    postcss: {
-      plugins: [tailwindcss, autoprefixer]
     }
   },
   server: {
