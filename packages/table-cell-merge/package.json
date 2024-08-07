@@ -10,7 +10,9 @@
   ],
   "scripts": {
     "start": "npx vite",
-    "build": "vite build"
+    "build": "npx vite build",
+    "build-rollup": "npx rollup -c",
+    "build-webpack": "npx webpack"
   },
   "keywords": [],
   "author": "",
