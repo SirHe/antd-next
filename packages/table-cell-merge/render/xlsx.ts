@@ -1,6 +1,6 @@
 import getMergeList from "../core"
 import Matrix from "../core/matrix"
-import { isArray } from "../core/utils"
+import { isArray, suffixToPrefix } from "../core/utils"
 
 interface MergeItem {
   s: { r: number; c: number }
@@ -12,6 +12,7 @@ export default function (data: Array<object>, columns: Array<any>) {
     data,
     columns.map((v: any) => ({ dataIndex: v.dataIndex, isMerge: v.isMerge }))
   )
+  data = suffixToPrefix(data)
   const header = columns.map((v: any) => v.title)
   const body: Array<Array<any>> = []
   let merges: Array<MergeItem> = []
@@ -24,7 +25,7 @@ export default function (data: Array<object>, columns: Array<any>) {
     body[i][j] = v.value
     if (v.rowSpan > 1) {
       // 需要合并的行
-      merges.push({ s: { r: i - (v.rowSpan - 1), c: j }, e: { r: i, c: j } })
+      merges.push({ s: { r: i, c: j }, e: { r: i + (v.rowSpan - 1), c: j } })
     }
     if (v.rowSpan === 0) {
       body[i][j] = ""
