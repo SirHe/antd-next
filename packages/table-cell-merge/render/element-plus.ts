@@ -11,7 +11,12 @@ export default (dataSource: Array<object>, columns: Array<any>) => {
     columns.map((v: any) => ({ dataIndex: v.dataIndex, isMerge: v.isMerge }))
   )
   dataSource = suffixToPrefix(dataSource)
-  const matrix = new Matrix(dataSource)
+  const matrix = new Matrix(dataSource, {
+    indexMap: {
+      x: Array.from({ length: dataSource.length }, (_, index) => index),
+      y: columns.map((v: any) => v.dataIndex)
+    }
+  })
 
   const spanMethod = ({ rowIndex, columnIndex }: any) => {
     const { rowSpan, colSpan } = matrix.getItem(rowIndex, columnIndex)

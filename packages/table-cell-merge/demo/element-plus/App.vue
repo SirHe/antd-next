@@ -13,7 +13,6 @@
 import { reactive } from "vue"
 import { getData } from "../../mock"
 import wrapperTable from "../../render/element-plus"
-import type { TableColumnCtx } from "element-plus"
 
 const columns = [
   {
@@ -51,14 +50,4 @@ let data = getData(10)
 data = data.map((v) => ({ ...v, id: v.id.slice(-6) }))
 const { dataSource, spanMethod } = wrapperTable(data, columns)
 const table = reactive({ dataSource, spanMethod, columns })
-
-const arraySpanMethod = ({ rowIndex, columnIndex }) => {
-  if (rowIndex % 2 === 0) {
-    if (columnIndex === 0) {
-      return [1, 2]
-    } else if (columnIndex === 1) {
-      return [0, 0]
-    }
-  }
-}
 </script>
