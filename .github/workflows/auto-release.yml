@@ -22,15 +22,15 @@ jobs:
           node-version: 20
 
       - name: Install specific npm version
-        run: npm install -g npm@latest
+        run: npm install -g pnpm
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       ## - name: Build package
       ##   run: npm run build
 
       - name: Publish to NPM
-        run: npm run publish
+        run: pnpm run publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
