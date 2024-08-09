@@ -21,6 +21,9 @@ jobs:
           node-version: 20
           pnpm-version: "latest"
 
+      - name: Install specific npm version
+        run: npm install -g pnpm
+
       - name: Verify pnpm version
         run: pnpm -v
 
