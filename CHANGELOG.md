@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/SirHe/antd-next/compare/v1.0.0...v1.1.0) (2024-08-09)
+
+
+### Features
+
+* 测试自动发版 ([94583a1](https://github.com/SirHe/antd-next/commit/94583a165097dbbad59472558c87b7bcfbc37cd7))
+
 # 1.0.0 (2024-08-09)
 
 
