@@ -21,6 +21,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install specific npm version
+        run: npm install -g npm@latest
+
       - name: Install dependencies
         run: npm install
 
