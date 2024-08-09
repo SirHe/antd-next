@@ -22,10 +22,7 @@ jobs:
           pnpm-version: "latest"
 
       - name: Install specific npm version
-        run: npm install -g pnpm
-
-      - name: Verify pnpm version
-        run: pnpm -v
+        run: npm install -g pnpm@latest
 
       - name: Install dependencies
         run: pnpm install
