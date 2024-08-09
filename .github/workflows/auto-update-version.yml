@@ -19,9 +19,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          pnpm-version: "latest"
+
+      - name: Install specific npm version
+        run: npm install -g pnpm@latest
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Semantic Release
         env:

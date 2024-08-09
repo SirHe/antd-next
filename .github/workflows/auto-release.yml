@@ -20,14 +20,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          pnpm-version: "latest"
+
+      - name: Install specific npm version
+        run: npm install -g pnpm
+
+      - name: Verify pnpm version
+        run: pnpm -v
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       ## - name: Build package
       ##   run: npm run build
 
       - name: Publish to NPM
-        run: npm run publish
+        run: pnpm run publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
