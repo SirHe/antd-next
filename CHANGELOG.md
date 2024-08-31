@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/SirHe/antd-next/compare/v1.2.0...v1.2.1) (2024-08-31)
+
+
+### Bug Fixes
+
+* 测试发布 ([ca155bb](https://github.com/SirHe/antd-next/commit/ca155bb82e38b98aa79f6d44744628fd234d577d))
+
 # [1.2.0](https://github.com/SirHe/antd-next/compare/v1.1.1...v1.2.0) (2024-08-09)
 
 
