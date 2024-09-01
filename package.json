@@ -14,7 +14,8 @@
     "prettier": "npx prettier --write .",
     "lint": "npx eslint --fix . ",
     "publish": "npx pnpm -r publish --access public --no-git-checks",
-    "prepare": "npx husky install"
+    "prepare": "npx husky install",
+    "release": "npx semantic-release"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.24.8",
